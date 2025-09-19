@@ -31,7 +31,7 @@ export default function Step1() {
             </div>
             <div className="flex gap-1">
                 <label htmlFor={"birthDate"} className="basis-1/4">BirthDate</label>
-                <input id="birthDate" className="basis-3/4 border border-gray-300" type={"text"} required value={birthDate} onChange={(e) => {
+                <input id="birthDate" className="basis-3/4 border border-gray-300" type={"date"} required value={birthDate} onChange={(e) => {
                     updateFormData('step1', {birthDate: e.target.value});
                 }}/>
             </div>
