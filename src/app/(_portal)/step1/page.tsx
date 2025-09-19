@@ -18,20 +18,20 @@ export default function Step1() {
         <form onSubmit={doSubmit} className="shadow" style={{minWidth: 500}}>
             <h2>Step1</h2>
             <div className="flex gap-1">
-                <label className="basis-1/4">FirstName</label>
-                <input className="basis-3/4 border border-gray-300" type={"text"} required value={firstName} onChange={(e) => {
+                <label htmlFor={"firstName"} className="basis-1/4" >FirstName</label>
+                <input id="firstName" className="basis-3/4 border border-gray-300" type={"text"} required value={firstName} onChange={(e) => {
                     updateFormData('step1', {firstName: e.target.value});
                 }}/>
             </div>
             <div className="flex gap-1">
-                <label className="basis-1/4">LastName</label>
-                <input className="basis-3/4 border border-gray-300" type={"text"} required value={lastName} onChange={(e) => {
+                <label htmlFor={"lastName"} className="basis-1/4">LastName</label>
+                <input id="lastName" className="basis-3/4 border border-gray-300" type={"text"} required value={lastName} onChange={(e) => {
                     updateFormData('step1', {lastName: e.target.value});
                 }}/>
             </div>
             <div className="flex gap-1">
-                <label className="basis-1/4">BirthDate</label>
-                <input className="basis-3/4 border border-gray-300" type={"text"} required value={birthDate} onChange={(e) => {
+                <label htmlFor={"birthDate"} className="basis-1/4">BirthDate</label>
+                <input id="birthDate" className="basis-3/4 border border-gray-300" type={"text"} required value={birthDate} onChange={(e) => {
                     updateFormData('step1', {birthDate: e.target.value});
                 }}/>
             </div>
