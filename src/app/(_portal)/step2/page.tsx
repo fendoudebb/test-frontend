@@ -18,14 +18,14 @@ export default function Step2() {
         <form onSubmit={doSubmit} style={{minWidth: 500}}>
             <h2>Step2</h2>
             <div className="flex gap-1">
-                <label className="basis-1/4">Country</label>
-                <input className="basis-3/4 border border-gray-300" type={"text"} required value={country} onChange={(e) => {
+                <label htmlFor={"country"} className="basis-1/4" >Country</label>
+                <input id="country" className="basis-3/4 border border-gray-300" type={"text"} required value={country} onChange={(e) => {
                     updateFormData('step2', {country: e.target.value});
                 }}/>
             </div>
             <div className="flex gap-1">
-                <label className="basis-1/4">Gender</label>
-                <select className="basis-3/4 border border-gray-300" required value={gender} onChange={(e) => {
+                <label htmlFor={"gender"} className="basis-1/4">Gender</label>
+                <select id="gender" className="basis-3/4 border border-gray-300" required value={gender} onChange={(e) => {
                     updateFormData('step2', {gender: e.target.value});
                 }}>
                     <option value="">Choose the gender</option>
@@ -35,8 +35,8 @@ export default function Step2() {
                 </select>
             </div>
             <div className="flex gap-1">
-                <label className="basis-1/4">Avatar</label>
-                <input className="basis-3/4 border border-gray-300" type={"file"} value={avatar} onChange={(e) => {
+                <label htmlFor={"avatar"} className="basis-1/4">Avatar</label>
+                <input id="avatar" className="basis-3/4 border border-gray-300" type={"file"} value={avatar} onChange={(e) => {
                     updateFormData('step2', {avatar: e.target.value});
                 }}/>
             </div>

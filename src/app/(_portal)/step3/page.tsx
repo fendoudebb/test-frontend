@@ -18,14 +18,14 @@ export default function Step3() {
         <form onSubmit={doSubmit} className="shadow" style={{minWidth: 500}}>
             <h2>Step3</h2>
             <div className="flex gap-1">
-                <label className="basis-1/4">Email</label>
-                <input className="basis-3/4 border border-gray-300" type={"email"} required value={email} onChange={(e) => {
+                <label htmlFor={"email"} className="basis-1/4">Email</label>
+                <input id="email" className="basis-3/4 border border-gray-300" type={"email"} required value={email} onChange={(e) => {
                     updateFormData('step3', {email: e.target.value});
                 }}/>
             </div>
             <div className="flex gap-1">
-                <label className="basis-1/4">Password</label>
-                <input className="basis-3/4 border border-gray-300" type={"password"} required minLength={8} value={password} onChange={(e) => {
+                <label htmlFor={"password"} className="basis-1/4">Password</label>
+                <input id="password" className="basis-3/4 border border-gray-300" type={"password"} required minLength={8} value={password} onChange={(e) => {
                     updateFormData('step3', {password: e.target.value});
                 }}/>
             </div>
